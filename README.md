@@ -17,12 +17,39 @@ Chaque élève a une parcelle sur laquelle il a une maison.
 
 Chaque maison est reliée au réseau électrique national (REN), un très gros stockage.
 
-"Mère Nature" est un service à disposition de tous, qui fournit:
+"Mère Nature" est un service à disposition de tous, qui fournit :
 - L'heure courante
 - La force du vent (pas de direction)
 - Taux d'ensoleillement (100% = midi, aucun nuage, 21 juin)
 
+À voir s’il y a des variations de soleil et force du vent dans les maisons...
+
 Chaque maison "existe" sous forme d'une application winforms qui tourne sur le poste de son propriétaire.
+
+Chaque maison a un budget de fonctionnement pour s’équiper en divers matériels :
+- four
+- lave-linge
+- sèche-cheveu
+- télé
+- frigo
+- bornes de recharges
+  - téléphone
+  - voiture
+- réveil
+- radio
+- plaque de cuisson
+- lave-vaisselle
+- ordinateur
+- ...
+
+Et chaque élément a un coût et une consommation...
+
+| appareil          | coût | consommation en watt |
+|-------------------|------|----------------------|
+| four à raclette A | 100  | 1500                 |
+| lave-linge     A  | 500  | 1000                 |
+| ...               |      |                      |
+
 
 Le poste du prof héberge:
 
