@@ -77,6 +77,8 @@ Un stockage ne restitue qu'une partie de ce qu'on y a mis (rendement)
 
 Chaque maison est équipée d'un stockage d'entrée particulier: un bloc de [supercondensateurs](https://fr.wikipedia.org/wiki/Supercondensateur#:~:text=Un%20supercondensateur%20est%20un%20condensateur,et%20les%20condensateurs%20%C3%A9lectrolytiques%20classiques.) qui sert de tampon. La maison "pète un câble" si elle demande plus d'énergie au supercondo qu'il n'en possède.
 
+UDP est utilisé pour les échanges sauf peut-être pour la partie MQTT
+
 ## Projet
 
 Chaque maison dispose d'une Mediathèque contenant des fichiers audio et vidéo.
