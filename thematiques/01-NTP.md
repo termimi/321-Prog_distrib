@@ -6,4 +6,4 @@ Tic, tac
 [NTP](../supports/ntp.md)
 
 ## Pratique
-[temps1](../activites/temps1)
+[temps1](../activites/ntp1)
