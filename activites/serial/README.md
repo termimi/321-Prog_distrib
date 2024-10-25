@@ -16,7 +16,7 @@ public class Character
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Description { get; set; }
-    public Actor Actor { get; set; }
+    public Actor PlayedBy { get; set; }
 }
 ```
 Le champ Actor reste `null`.
@@ -42,7 +42,9 @@ public class Actor
 
 ## Etape 3
 
-Faites jouer votre personnage par votre acteur (1 seul fichier!)
+Faites jouer votre personnage par votre acteur: 1 seul fichier JSON doit vou permettre d'observer une structure de ce type au debugger après dé-sérialisation:
+
+![](melissa.png)
 
 ## Etape 4
 
