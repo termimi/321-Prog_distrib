@@ -80,6 +80,9 @@ La sérialisation prend un objet, le « parcourt » pour en extraire ses att
 
 ## Défis et limites de la sérialisation
 Malgré ses avantages, la sérialisation présente aussi des défis. 
+
+- Les dates et heures. Les formats varient d'un pays à l'autre, d'une culture à l'autre. Chaque programmeur a envie de travailler avec un format qui lui est familier. Il est capital de se mettre d'accord sur un format au sein d'un système distribué. Le format reconnu mondialement est [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601)
+  
 - La sécurité est un problème majeur, car la désérialisation de données provenant de sources externes peut introduire des vulnérabilités, notamment des attaques d'injection. 
 
 - La performance peut être un problème si les objets sont trop complexes ou si le volume de données est important, en particulier avec les formats texte qui génèrent de plus grands volumes de données par rapport aux formats binaires. 
