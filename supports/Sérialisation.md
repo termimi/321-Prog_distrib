@@ -36,11 +36,11 @@ Inspectons ses valeurs grâce au debugger:
 
 ![](assets/debug%20actor.png)
 
-Maintenant que mon objet est en mémoire, les diverses parties de mon programme vont pouvoir y accéder puisqu'elles partagent la même mémoire.
+Maintenant que notre objet est en mémoire, les diverses parties de notre programme vont pouvoir y accéder puisqu'elles partagent la même mémoire.
 
-Je veux maintenant retrouver ce même objet dans la mémoire d'un autre programme (soit sur la même machine, soit ailleurs).
+Nous voulons maintenant retrouver ce même objet dans la mémoire d'un autre programme (soit sur la même machine, soit ailleurs).
 
-Je vais donc commencer par **sérialiser** mon objet (binaire) en JSON (texte):
+Nous allons donc commencer par **sérialiser** notre objet (binaire) en JSON (texte):
 
 ```json
 {
@@ -51,7 +51,7 @@ Je vais donc commencer par **sérialiser** mon objet (binaire) en JSON (texte):
   "IsAlive": true
 }
 ```
-Ce format texte est beaucoup plus facile à transmettre que le binaire. Je peux le stocker dans un fichier facilement lisible et éditable, ou je peux l'envoyer par réseau (http, TCP/IP) à une autre machine.
+Ce format texte est beaucoup plus facile à transmettre que le binaire. Nous pouvons le stocker dans un fichier facilement lisible et éditable, ou nous pouvons l'envoyer par réseau (http, TCP/IP) à une autre machine.
 
 Le récepteur n'a plus qu'à **désérialiser** ce texte pour retrouver l'objet binaire avec lequel il pourra travailler dans sa mémoire à lui.
 
