@@ -42,7 +42,7 @@ public class Actor
 
 ## Etape 3
 
-Faites jouer votre personnage par votre acteur: 1 seul fichier JSON doit vou permettre d'observer une structure de ce type au debugger après dé-sérialisation:
+Faites jouer votre personnage par votre acteur: 1 seul fichier JSON doit vous permettre d'observer une structure de ce type au debugger après dé-sérialisation:
 
 ![](melissa.png)
 
