@@ -8,7 +8,9 @@ Voici le pitch de la saison 1 de la série "Eté et miel":
 
 ## Etape 1
 
-Chacun crée un objet de la classe Character. Choisissez Gérard ou Maya, ou inventez un personnage fictif.
+Créez une application console (!! **SANS** .NET Framework !!)
+
+Chacun crée un objet de la classe Character pour un personnage différent. Choisissez Gérard ou Maya, ou inventez un personnage fictif (en rapport avec le pitch de la série).
 
 ```csharp
 public class Character
@@ -21,7 +23,7 @@ public class Character
 ```
 Le champ Actor reste `null`.
 
-Sérialisez votre objet en JSON, déposez le résultat dans un dossier partagé (Teams)
+Sérialisez votre objet en JSON, déposez le résultat (par exemple `gérard.json`)dans un dossier partagé (Teams)
 
 Récupérez les fichiers des autres, dé-sérialisez-les tous !
 
@@ -42,9 +44,18 @@ public class Actor
 
 ## Etape 3
 
-Faites jouer votre personnage par votre acteur: 1 seul fichier JSON doit vous permettre d'observer une structure de ce type au debugger après dé-sérialisation:
+Faites jouer votre personnage par votre acteur: 
 
-![](melissa.png)
+```csharp
+// TODO Désérialiser un seul fichier
+
+Console.WriteLine($"Le personnage de {perso.FirstName} {perso.LastName} est joué par {perso.PlayedBy.FirstName} {perso.PlayedBy.LastName}");
+```
+
+Résultat attendu, quelque chose comme ça:
+```
+Le personnage de Melissa D'Anjou est joué par Jennifer Aniston
+```
 
 ## Etape 4
 
@@ -66,3 +77,8 @@ public class Episode
 ## Etape 5
 
 Assemblez la saison 1 de "Eté et miel" dans un seul fichier
+
+## Conclusion
+
+Mise en commun: qu'avez-vous utilisé pour sérialiser/désérialiser ?  
+Décidons ensemble de l'outil que nous utiliserons tous à l'avenir.
