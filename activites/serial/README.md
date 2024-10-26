@@ -4,7 +4,7 @@ Voici le pitch de la saison 1 de la série "Eté et miel":
 
 > Gérard et Maya dirigent la cafétéria d'une école professionnelle. Leur spécialité: les endives aux miel qui s'arrachent chaque jour à leur comptoir. Leur fournisseur de miel a décidé de tripler ses prix, Gérard et Maya sont pris au piège.
 >
-> Un groupe de profs et d'élèves de l'école décident de leur venir en aide en lançant dans l'apiculture pour produire leur précieux nectar en cachette dans la salle des serveurs de l'école... 
+> Un groupe de profs et d'élèves de l'école décident de leur venir en aide en se lançant dans l'apiculture pour produire leur précieux nectar en cachette dans la salle des serveurs de l'école... 
 
 ## Etape 1
 
@@ -29,7 +29,7 @@ Récupérez les fichiers des autres, dé-sérialisez-les tous !
 
 ## Etape 2
 
-Faites pareile avec la classe `Actor`:
+Faites pareil avec la classe `Actor`:
 
 ```csharp
 public class Actor
