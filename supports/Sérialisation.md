@@ -104,7 +104,7 @@ Il y a plusieurs raisons pour lesquelles on pourrait choisir de ne pas utiliser 
 * La sérialisation de texte peut être plus difficile à transférer entre différentes plateformes et systèmes
   d'exploitation, car elle peut nécessiter des conversions de format ou de codage des caractères.
 
-Toutefois, elle a l'avantage d'être directement  **lisible par les humains**.
+Elle a donc surtout l'avantage d'être **lisible par les humains**.
 
 ## Comment fonctionne la sérialisation ?
 
