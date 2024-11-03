@@ -1,9 +1,12 @@
 # NTP
 
-Tic, tac
+Tic, tac...
+
+![ntp.webp](assets/ntp.webp)
+
 
 ## Théorie
 [NTP](../supports/ntp.md)
 
 ## Pratique
-[temps1](../activites/ntp1)
+[Manipulations temporelles...](../activites/ntp1/README.md)

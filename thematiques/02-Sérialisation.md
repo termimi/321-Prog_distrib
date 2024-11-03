@@ -6,4 +6,4 @@ Des échanges de données
 [Sérialisation](../supports/Sérialisation.md)
 
 ## Pratique
-[Sérialise ma série](../activites/serial/)
+[Sérialise ma série](../activites/serial/README.md)
