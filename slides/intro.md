@@ -52,6 +52,7 @@ image: ./assets/iot.jpg
     - Précision : synchronisation à la milliseconde pour les applications critiques
 
 </v-clicks>
+
 ---
 
 # La sérialisation dans l'IoT
@@ -72,6 +73,7 @@ image: ./assets/iot.jpg
     - Communication entre les microservices
 
 </v-clicks>
+
 ---
 
 # Les microservices dans l'architecture IoT
@@ -89,6 +91,7 @@ image: ./assets/iot.jpg
     - Service d'analyse et de prévisions
 
 </v-clicks>
+
 ---
 
 <v-clicks depth="2">
@@ -103,6 +106,7 @@ image: ./assets/iot.jpg
     - Services indépendants pour le traitement et l'analyse des données
 
 </v-clicks>
+
 ---
 
 # Défis et bonnes pratiques
