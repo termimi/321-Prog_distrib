@@ -34,7 +34,7 @@ ntpData[0] = 0x1B; //LI = 0 (no warning), VN = 3 (IPv4 only), Mode = 3 (Client M
    standard du protocole NTP).
 
 ```csharp
-IPEndPoint ntpEndpoint = new IPEndPoint(new IPEndPoint(Dns.GetHostAddresses(ntpServer)[0], 123);
+IPEndPoint ntpEndpoint = new IPEndPoint(Dns.GetHostAddresses(ntpServer)[0], 123);
 ```
 
 7. Créez une variable `ntpClient` de type `UdpClient` et connectez-la au serveur NTP.
