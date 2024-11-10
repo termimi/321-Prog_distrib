@@ -8,13 +8,25 @@ communiquent via un serveur central appelé "broker".
 
 ![](./assets/mqtt.jpg)
 
-Dans ce modèle, les clients (appareils) ne communiquent pas directement entre eux. Ils se connectent au broker en TCP/IP
-et publient des messages sur des topics (sujets) spécifiques. D'autres clients peuvent alors s'abonner à ces topics pour
-recevoir les messages. Par exemple, un capteur de température peut publier des données sur le topic "
-moteur/température", et tous les appareils abonnés à ce topic recevront les mises à jour.
+Le protocole MQTT est particulièrement adapté aux environnements avec une bande passante limitée ou des connexions instables, car il consomme peu de ressources et peut fonctionner avec un minimum de données.  
 
-Le protocole MQTT est particulièrement adapté aux environnements avec une bande passante limitée ou des connexions
-instables, car il consomme peu de ressources et peut fonctionner avec un minimum de données.
+Dans ce modèle, les clients (appareils) ne communiquent pas directement entre eux. Ils se connectent au **broker** en TCP/IP et publient des messages sur des **topics** (sujets) spécifiques. D'autres clients peuvent alors s'abonner à ces topics pour recevoir les messages. Par exemple, un capteur de température peut publier des données sur le topic "moteur/température", et tous les appareils abonnés à ce topic recevront les mises à jour.
+
+Les topics sont hiérarchiques, séparés par des barres obliques (`/`). Chaque niveau de la hiérarchie apporte des détails supplémentaires sur le sujet du message, ce qui permet d'organiser et de filtrer les informations.
+
+Exemple: Prenons le topic `maison/salon/temperature`
+
+`maison` est le premier niveau, qui indique un bâtiment spécifique.
+`salon` est le deuxième niveau, indiquant une pièce précise (ici, le salon).
+`temperature` est le troisième niveau, qui précise le type d'information (la température).
+
+## Utilisation des Wildcards
+
+MQTT permet d'utiliser des caractères génériques (wildcards) pour s’abonner à plusieurs topics en même temps :
+
+- `+` pour un niveau : s'abonner à `maison/+/temperature` signifie que l'on recevra tous les messages de température de toutes les pièces de la maison (maison/salon/temperature, maison/cuisine/temperature, etc.).
+- `#` pour plusieurs niveaux : s'abonner à `maison/#` permet de recevoir tous les messages de la maison, peu importe la pièce et le type de données.
+
 
 ## Qualité de Service (QoS)
 
