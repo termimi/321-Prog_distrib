@@ -37,6 +37,6 @@ les éléments suivants :
 
 - Les messages transmis sont aussi reçus par le client qui l’a émis => corriger cela
 - LWT n’est pas pris en compte, ajouter cette fonctionnalité :
-  - Une maison "morte" envoie un message d’au revoir aux autres (au travers de LWT) avec une citation philosophique.
-  - Chaque maison observe une minute de silence en son honneur.
+  - Une maison détectée comme "morte" envoie un message d’au revoir aux autres (au travers de LWT) avec une citation philosophique.
+  - Chaque maison observe une minute de silence en son honneur...
 
