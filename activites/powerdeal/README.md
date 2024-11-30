@@ -22,11 +22,13 @@ Voici comment se déroule un achat:
 
 ![](purchase.png)
 
+Les messages échangés entre PowerDeal et la maison appartiennent à notre [protocole powercher](https://github.com/ETML-INF/powercher/tree/main/Backend/Protocol) (sur MQTT).
+
 Les enveloppes des messages sont porteuses du type `MessageType.POWER` et d'un objet de type `PowerTransaction`
 
-Le type de _transaction_ que propose le message est déterminé par la propriété `Type` de l'objet `PowerTransaction`: `SALE`, `REQUEST` ou `OFFER` (de l'énumération `PowerTransactionType`)
+Le type de _transaction_ que propose le message est déterminé par la propriété `Type` de l'objet `PowerTransaction`: `SALE`, `PURCHASE`, `REQUEST` ou `OFFER` (de l'énumération `PowerTransactionType`)
 
-0. PowerDeal diffuse continuellement le prix du kwh qu'il propose. L'offre est en broadcast (`Customer` est `null`)
+0. PowerDeal diffuse continuellement le prix du kwh qu'il propose. L'offre est en broadcast (`PowerTransaction.Customer` est `null`)
 1. La maison fait une demande à PowerDeal: un certain nombre de kwh (`amount`) pour un certain montant total (`price`)
 2. PowerDeal vend l'énergie demandée. Normalement `amount` et `price` sont égaux à la demande. **Attention:** si le prix présenté est incompatible avec le prix annoncé par PowerDeal, il ne répondra même pas !!
 3. La maison ajoute la puissance à son UPS
