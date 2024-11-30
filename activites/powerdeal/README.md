@@ -19,6 +19,7 @@ Si la charge de l'UPS dépasse les 100%, l'excédent est perdu, mais **ATTENTION
 ## Acheter de l'énergie à PowerDeal
 
 Voici comment se déroule un achat:
+
 ![](purchase.png)
 
 Les enveloppes des messages sont porteuses du type `MessageType.POWER` et d'un objet de type `PowerTransaction`
@@ -34,6 +35,7 @@ Le type de _transaction_ que propose le message est déterminé par la propriét
 ## Vendre de l'énergie à PowerDeal
 
 Le processus utilise les même mécanismes que ceux de l'achat:
+
 ![](sale.png)
 
 1. La maison propose de l'énergie à PowerDeal: un certain nombre de kwh (`amount`) pour un certain montant total (`price`)
