@@ -5,13 +5,13 @@
 ## 2 éléments clés
 Malgré les opportunités présentées dans l’image, nous allons nous limiter à 2 éléments clés 🔑 :
 
-1. Réseau de confiance
-2. Confidentialité
+1. Confidentialité
+2. Réseau de confiance
+
 
 ## Théorie 📖
-
-- [Réseau de confiance](../supports/reseau-confiance.md)
 - [Confidentialité](../supports/confidentialite.md)
+- [Réseau de confiance](../supports/reseau-confiance.md)
 
 ## Pratique 👷
 

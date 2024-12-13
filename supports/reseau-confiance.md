@@ -6,27 +6,36 @@ Un **réseau de confiance** est un modèle dans lequel chaque participant (par e
 appareil IoT) accorde sa confiance à d'autres participants sur la base de relations directes ou indirectes. Cette
 confiance est essentielle pour assurer la validité des échanges.
 
-## Principes généraux :
+## 2 aspects fondamentaux
+Pour réaliser un réseau de confiance, au moins deux élements sont à prendre en compte : 
 
-1. **Nœuds participants** : Chaque maison ou appareil connecté représente un nœud.
-2. **Certificats de confiance** :
-    - Les nœuds possèdent des certificats émis par une autorité centrale ou décentralisée.
-    - Chaque certificat associe une identité à une clé publique.
-3. **Propagation de la confiance** :
-    - Les relations de confiance peuvent être directes (maison A connaît maison B) ou transitives (A fait confiance à B,
-      qui fait confiance à C).
-4. **Validation mutuelle** :
-    - Avant de partager des informations sensibles, les nœuds valident leur relation de confiance via des certificats ou
-      d'autres mécanismes.
+### Identité
+Chaque nœud doit pouvoir être identifié et reconnaissable (non-répudiation). Ceci implique, par défaut, une
+architecture de type PKI.
 
-## Exemple d'application
+Cela passe donc par des **certificats de confiance** :
 
-### Contexte :
+- Les nœuds possèdent des certificats émis par une autorité centrale ou décentralisée.
+- Chaque certificat associe une identité à une clé publique.
 
-- Les maisons connectées échangent des **messages MQTT** via un broker central (ou un cluster).
-- Ces messages contiennent des informations sur la consommation électrique ou des fichiers multimédias.
+tout en permettant la **propagation de la confiance** :
+- Les relations de confiance peuvent être directes (maison A connaît maison B) ou transitives (A fait confiance à B,
+  qui fait confiance à C).
 
-### Étapes :
+ce qui implique une **validation mutuelle** avant de partager des informations.
+
+### Validité
+Chaque nœud doit agir pour le bien commun du réseau. Ceci implique différentes stratégies comme 
+l’analyse du traffic pour un `contrôleur` pour éviter, par exemple, qu’une maison modifie sa trésorerie de manière
+illicite...
+
+
+#### Importance du logging
+On peut aussi imaginer analyser les logs quotidiens pour détecter des opérations illicites... Ceci mène naturellement
+à l’utilisation de mécanismes en lien avec la blockchain, ce qui d’ailleurs résout aussi un problème lié à la 
+[confiance initiale](#défis-et-solutions-de-la-version-pki)
+
+## Exemple d'application avec PKI
 
 1. **Établissement de la confiance** :
     - Chaque maison s'enregistre auprès d'une autorité de certification (CA) pour obtenir un certificat X.509, qui
@@ -78,7 +87,7 @@ sequenceDiagram
     Note over B: Le message est validé et traité
 ```
 
-## Défis et solutions
+### Défis et solutions de la version PKI
 
 1. **Gestion des certificats** :
     - Problème : Distribution et révocation des certificats.
