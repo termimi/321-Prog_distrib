@@ -65,13 +65,11 @@ sequenceDiagram
    participant CA as Autorité de Certification (CA)
 
     Note over A, B: Initialisation du réseau de confiance
+    A->>A: Génère une clé privée/publique
     A->>CA: Demande un certificat
     CA-->>A: Émet un certificat avec clé publique
-    B->>CA: Demande un certificat
-    CA-->>B: Émet un certificat avec clé publique
 
     Note over A, Broker: Envoi d'un message signé
-    A->>A: Génère une clé privée/publique
     A->>A: Crée un message et le signe avec sa clé privée
     A->>Broker: Publie le message signé sur un topic MQTT
 
