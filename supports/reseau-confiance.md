@@ -13,6 +13,7 @@ Pour réaliser un réseau de confiance, au moins deux élements sont à prendre 
 Chaque nœud doit pouvoir être identifié et reconnaissable, du point de vue des deux partenaires d'un échange:
 - Le récepteur est certain de l'identité de l'émetteur
 - L'émetteur ne peut pas prétendre ne pas être à l'origine du message
+
 On parle alors de **non-répudiation**, ce qui implique une
 architecture de type PKI.
 
