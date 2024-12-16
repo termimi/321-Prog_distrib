@@ -10,7 +10,10 @@ confiance est essentielle pour assurer la validité des échanges.
 Pour réaliser un réseau de confiance, au moins deux élements sont à prendre en compte : 
 
 ### Identité
-Chaque nœud doit pouvoir être identifié et reconnaissable (non-répudiation). Ceci implique, par défaut, une
+Chaque nœud doit pouvoir être identifié et reconnaissable, du point de vue des deux partenaires d'un échange:
+- Le récepteur est certain de l'identité de l'émetteur
+- L'émetteur ne peut pas prétendre ne pas être à l'origine du message
+On parle alors de **non-répudiation**, ce qui implique une
 architecture de type PKI.
 
 Cela passe donc par des **certificats de confiance** :
